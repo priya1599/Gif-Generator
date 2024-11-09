@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Real-Time GIF Generator
+This is a Real-Time GIF Generator where users can upload or click a selfie to generate a live portrait GIF in real-time using a Gen AI model.
+
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
