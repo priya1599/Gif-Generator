@@ -16,9 +16,21 @@ const videoConstraints = {
 
 const App = () => {
   const [selectedImage, setSelectedImage] = useState(preview);
+  const [gif, setGif] = useState(null);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   
-
+  const generateGif = async () => {
+    setLoading(true);
+    const response = await fetch("", {
+      method: "POST",
+      body: JSON.stringify({ image }),
+      headers: { "Content-Type": "application/json" },
+    });
+    const result = await response.blob();
+    setGif(URL.createObjectURL(result));
+    setLoading(false);
+  };
   const handleImageCapture = (event) => {
     const file = event.target.files[0];
     if (file) {
